@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="color-scheme" content="light only">
+  <meta name="theme-color" content="#f5f2ec">
+  <title>自分の怒り・嫌悪感の構造と、今後の人間関係・仕事・子育てへの指針（2026年11月20日）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light only;
+
+      /* 紙と墨（スマホ用に明るさとコントラストを上げた配色） */
+      --bg: #f5f2ec;
+      --surface: #fffefb;
+      --subtle: #f8f5ef;
+
+      --ink: #23201c;
+      --ink-2: #47423b;
+      --ink-3: #6a645a;
+
+      /* 意味の色（全章で同じ意味に固定）
+         藍＝基調・価値観／松葉＝目指す方向・行動／弁柄＝怒り・盲点・注意／黄土＝留保・未確定・疲労 */
+      --indigo: #2f4b63;
+      --indigo-deep: #213849;
+      --indigo-soft: #e9eef3;
+      --green: #356a58;
+      --green-soft: #e7f0eb;
+      --bengara: #9a4a36;
+      --bengara-soft: #f8ebe5;
+      --ochre: #7a5917;
+      --ochre-soft: #f5eedd;
+
+      --line: #e6e0d5;
+      --line-strong: #d3cab9;
+
+      --font-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif;
+      --font-serif: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'YuMincho', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background-color: var(--bg);
+      color: var(--ink);
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.85;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      background-color: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      line-break: strict;
+      overflow-wrap: break-word;
+      overflow-x: clip;
+    }
+
+    ::selection {
+      background: rgba(47, 75, 99, 0.18);
+    }
+
+    .page {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 16px max(16px, env(safe-area-inset-right)) 40px max(16px, env(safe-area-inset-left));
+    }
+
+    /* 見出しは語のまとまりで改行する（<wbr>の位置で折り返し、収まらないときだけ途中で折る） */
+    h1, h2, h3,
+    .toc-text,
+    .callout-title,
+    .fig-title,
+    .fig-box p,
+    .td-key,
+    .step-title {
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    h1, h2, h3 {
+      font-feature-settings: "palt";
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    p, li, td {
+      text-wrap: pretty;
+    }
+
+    p + p {
+      margin-top: 10px;
+    }
+
+    strong {
+      font-weight: 700;
+      color: var(--indigo-deep);
+    }
+
+    section[id], nav[id] {
+      scroll-margin-top: 12px;
+    }
+
+    /* ---------- 札 ---------- */
+    .tag {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.45;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .tag-navy { background: var(--indigo-soft); color: var(--indigo); }
+    .tag-teal { background: var(--green-soft); color: var(--green); }
+    .tag-coral { background: var(--bengara-soft); color: var(--bengara); }
+    .tag-amber { background: var(--ochre-soft); color: var(--ochre); }
+
+    /* ---------- 表紙 ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px 18px 22px 22px;
+      box-shadow: 0 8px 24px rgba(60, 48, 30, 0.06);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background: var(--indigo);
+    }
+
+    .hero-ripple {
+      position: absolute;
+      right: -112px;
+      top: -118px;
+      width: 250px;
+      height: 250px;
+      pointer-events: none;
+    }
+
+    .hero > *:not(.hero-ripple) {
+      position: relative;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.45;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: rgba(47, 75, 99, 0.07);
+      color: var(--indigo);
+      border: 1px solid rgba(47, 75, 99, 0.18);
+      letter-spacing: 0.03em;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 6.2vw, 27px);
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+      margin-bottom: 14px;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--ink-2);
+      padding-top: 12px;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    /* ---------- 目次 ---------- */
+    .toc {
+      margin-top: 16px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 14px 8px;
+    }
+
+    .toc-title {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--indigo-deep);
+      letter-spacing: 0.04em;
+      padding: 0 4px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .toc ol {
+      list-style: none;
+    }
+
+    .toc li + li {
+      border-top: 1px dotted var(--line-strong);
+    }
+
+    .toc a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 48px;
+      padding: 8px 4px;
+      color: var(--ink);
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(47, 75, 99, 0.12);
+    }
+
+    .toc a:active {
+      background: var(--indigo-soft);
+    }
+
+    .toc-num {
+      flex: 0 0 34px;
+      height: 26px;
+      border-radius: 8px;
+      background: var(--indigo-soft);
+      color: var(--indigo);
+      font-family: var(--font-serif);
+      font-size: 13.5px;
+      font-weight: 700;
+      line-height: 26px;
+      text-align: center;
+    }
+
+    .toc-text {
+      flex: 1;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .toc a::after {
+      content: "";
+      flex: 0 0 7px;
+      height: 7px;
+      border-top: 1.5px solid var(--ink-3);
+      border-right: 1.5px solid var(--ink-3);
+      transform: rotate(45deg);
+      margin: 0 6px 0 0;
+      opacity: 0.6;
+    }
+
+    /* ---------- 章 ---------- */
+    .ch {
+      margin-top: 44px;
+    }
+
+    .ch-head {
+      position: relative;
+      z-index: 21;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 14px;
+      margin-top: -44px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--indigo-deep);
+    }
+
+    /* 章の頭では、大きな見出しが章名の帯を覆い隠す（見出しが上へ流れると帯が現れる） */
+    .ch-head::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -16px;
+      right: -16px;
+      background: var(--bg);
+      z-index: -1;
+    }
+
+    .ch-num {
+      flex: 0 0 auto;
+      min-width: 52px;
+      height: 52px;
+      padding: 0 6px;
+      border-radius: 14px;
+      background: var(--indigo-deep);
+      color: #ffffff;
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 52px;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    .ch-kicker {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--indigo);
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+      margin-bottom: 2px;
+    }
+
+    .ch-head h2 {
+      font-size: clamp(19px, 5.4vw, 22px);
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+    }
+
+    .ch-lead {
+      margin-bottom: 14px;
+    }
+
+    /* 章名の帯（読んでいる章の間、画面の上に残る。タップで目次へ） */
+    .ch-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 44px;
+      margin: 0 -16px;
+      padding: 0 16px;
+      background: rgba(245, 242, 236, 0.94);
+      -webkit-backdrop-filter: saturate(1.3) blur(10px);
+      backdrop-filter: saturate(1.3) blur(10px);
+      border-bottom: 1px solid var(--line-strong);
+      color: var(--ink);
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(47, 75, 99, 0.12);
+    }
+
+    .ch-bar-num {
+      flex: 0 0 auto;
+      min-width: 30px;
+      height: 24px;
+      padding: 0 5px;
+      border-radius: 7px;
+      background: var(--indigo-deep);
+      color: #ffffff;
+      font-family: var(--font-serif);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    .ch-bar-title {
+      flex: 1;
+      min-width: 0;
+      font-size: clamp(13.5px, 3.75vw, 14.5px);
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--indigo-deep);
+      letter-spacing: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ch-bar-toc {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--indigo-soft);
+      color: var(--indigo);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .ch-bar-toc::before {
+      content: "";
+      width: 12px;
+      height: 9px;
+      background:
+        linear-gradient(currentColor, currentColor) top / 100% 1.5px no-repeat,
+        linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat,
+        linear-gradient(currentColor, currentColor) bottom / 100% 1.5px no-repeat;
+    }
+
+    /* 章末：次の章へ・目次へ戻る */
+    .ch-foot {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 18px;
+    }
+
+    .to-next {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 56px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(47, 75, 99, 0.12);
+    }
+
+    .to-next::after {
+      content: "→";
+      margin-left: auto;
+      color: var(--indigo);
+      font-weight: 700;
+    }
+
+    .to-next-label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--ink-3);
+      letter-spacing: 0.06em;
+      line-height: 1.5;
+    }
+
+    .to-next-title {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--indigo-deep);
+      line-height: 1.5;
+    }
+
+    .to-toc {
+      display: block;
+      width: fit-content;
+      margin: 0 0 0 auto;
+      padding: 6px 2px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-3);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .to-toc::before {
+      content: "↑ ";
+    }
+
+    /* ---------- カード ---------- */
+    .stack > * + * {
+      margin-top: 14px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 16px 18px;
+      box-shadow: 0 2px 10px rgba(60, 48, 30, 0.035);
+    }
+
+    .card > * + * {
+      margin-top: 10px;
+    }
+
+    .card-top-teal { border-top: 4px solid var(--green); }
+    .card-top-coral { border-top: 4px solid var(--bengara); }
+    .card-top-amber { border-top: 4px solid var(--ochre); }
+    .card-top-navy { border-top: 4px solid var(--indigo); }
+
+    .card h3 {
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--indigo-deep);
+      letter-spacing: 0.02em;
+    }
+
+    .card .tag + h3,
+    .card-tagrow + h3 {
+      margin-top: 8px;
+    }
+
+    /* ---------- 囲み ---------- */
+    .callout {
+      border-radius: 4px 12px 12px 4px;
+      padding: 13px 14px;
+      border-left: 3px solid var(--indigo);
+      background: var(--indigo-soft);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .callout-teal { border-left-color: var(--green); background: var(--green-soft); }
+    .callout-coral { border-left-color: var(--bengara); background: var(--bengara-soft); }
+    .callout-amber { border-left-color: var(--ochre); background: var(--ochre-soft); }
+
+    .callout-title {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+      margin-bottom: 6px;
+      color: var(--indigo);
+    }
+
+    .callout-teal .callout-title { color: var(--green); }
+    .callout-coral .callout-title { color: var(--bengara); }
+    .callout-amber .callout-title { color: var(--ochre); }
+
+    /* 第1章の中心命題 */
+    .core {
+      background: var(--surface);
+      border: 1px solid #ead5cb;
+      border-top: 4px solid var(--bengara);
+      border-radius: 14px;
+      padding: 18px 16px;
+    }
+
+    .core .callout-title {
+      color: var(--bengara);
+    }
+
+    .core-statement {
+      font-family: var(--font-serif);
+      font-feature-settings: "palt";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.75;
+      color: var(--bengara);
+      letter-spacing: 0.02em;
+      padding: 4px 0 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ead5cb;
+    }
+
+    .core-statement strong {
+      color: inherit;
+    }
+
+    .quote-principle {
+      background: var(--subtle);
+      border-left: 3px solid var(--indigo);
+      border-radius: 4px 12px 12px 4px;
+      padding: 14px 14px;
+      font-family: var(--font-serif);
+      font-feature-settings: "palt";
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+      color: var(--indigo-deep);
+    }
+
+    /* ---------- 箇条書き ---------- */
+    .styled-list {
+      list-style: none;
+    }
+
+    .styled-list li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .styled-list li + li {
+      margin-top: 8px;
+    }
+
+    .styled-list li::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 0.7em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .styled-list.coral li::before { background: var(--bengara); }
+    .styled-list.amber li::before { background: var(--ochre); }
+    .styled-list.navy li::before { background: var(--indigo); }
+
+    /* ---------- 表 ---------- */
+    .table-wrap {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    thead th {
+      background: var(--subtle);
+      color: var(--indigo-deep);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: left;
+      line-height: 1.5;
+      padding: 10px 12px;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--line-strong);
+    }
+
+    thead th:first-child {
+      width: 35%;
+    }
+
+    tbody td {
+      padding: 12px 11px;
+      border-top: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    tbody tr:first-child td {
+      border-top: none;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fbf9f5;
+    }
+
+    .td-key {
+      font-weight: 700;
+      color: var(--bengara);
+    }
+
+    /* ---------- 第1章の構造図（スマホ用に縦組み） ---------- */
+    .fig {
+      background: var(--subtle);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 12px 16px;
+    }
+
+    .fig-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .fig-box {
+      border-radius: 11px;
+      padding: 11px 11px 12px;
+      font-size: 14px;
+      line-height: 1.65;
+      border: 2px solid;
+      background: var(--surface);
+    }
+
+    .fig-title {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
+
+    .fig-main {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .fig-note {
+      color: var(--ink-2);
+      margin-top: 4px;
+    }
+
+    .fig-box p + p { margin-top: 4px; }
+
+    .fig-tolerant { background: var(--green-soft); border-color: var(--green); }
+    .fig-tolerant .fig-title { color: var(--green); }
+    .fig-react { background: var(--bengara-soft); border-color: var(--bengara); }
+    .fig-react .fig-title { color: var(--bengara); }
+    .fig-keep { border-color: var(--indigo); }
+    .fig-keep .fig-title { color: var(--indigo); }
+    .fig-keep .fig-main { color: var(--green); font-weight: 700; }
+    .fig-risk { border-color: var(--bengara); }
+    .fig-risk .fig-title { color: var(--bengara); }
+
+    .fig-arrows {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      height: 30px;
+    }
+
+    .fig-arrows svg {
+      display: block;
+      margin: 0 auto;
+      width: 16px;
+      height: 30px;
+    }
+
+    .fig-goal {
+      border-radius: 13px;
+      padding: 15px 15px 16px;
+      background: var(--indigo-deep);
+      color: #e3e9ee;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .fig-goal .fig-title {
+      color: #ecd49e;
+      font-size: 13.5px;
+      letter-spacing: 0.04em;
+    }
+
+    .fig-goal-main {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+
+    .caption {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-top: 10px;
+    }
+
+    /* ---------- 出来事の整理（第4章） ---------- */
+    .sub {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+
+    .card > .sub {
+      margin-top: 14px;
+    }
+
+    .sub > .tag {
+      margin-bottom: 8px;
+    }
+
+    /* ---------- 捉え方の比較（第5章・第8章） ---------- */
+    .compare {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .compare-box {
+      border-radius: 12px;
+      padding: 13px 14px 14px;
+      border: 1px solid var(--line);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .compare-box .tag {
+      margin-bottom: 6px;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+    }
+
+    .compare-box.before { background: var(--bengara-soft); border-color: #e8d2c8; }
+    .compare-box.after { background: var(--green-soft); border-color: #c9ddd1; }
+    .compare-box.plain { background: var(--subtle); }
+
+    .compare-arrow {
+      align-self: center;
+      width: 30px;
+      height: 30px;
+      margin: -6px 0;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 28px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .compare-gap {
+      height: 10px;
+    }
+
+    /* ---------- 5つの手順（第8章） ---------- */
+    .steps {
+      list-style: none;
+      background: var(--subtle);
+      border-radius: 12px;
+      padding: 14px 14px 4px;
+    }
+
+    .steps li {
+      position: relative;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      padding-bottom: 14px;
+    }
+
+    .steps li:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 36px;
+      bottom: 2px;
+      width: 2px;
+      background: #bcd3c7;
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #ffffff;
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 34px;
+      text-align: center;
+    }
+
+    .step-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--indigo-deep);
+      line-height: 1.5;
+      padding-top: 4px;
+    }
+
+    .steps p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    /* ---------- 結びの言葉（第13章） ---------- */
+    .editorial {
+      background: linear-gradient(180deg, #fffefb 0%, #f8f4ec 100%);
+      border: 1px solid var(--line-strong);
+      border-top: 4px solid var(--indigo);
+      border-radius: 16px;
+      padding: 22px 18px 20px;
+    }
+
+    .editorial > p {
+      font-family: var(--font-serif);
+      font-size: 16.5px;
+      font-weight: 600;
+      line-height: 2;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+    }
+
+    .editorial > p + p {
+      margin-top: 16px;
+    }
+
+    .editorial > p strong {
+      color: var(--indigo-deep);
+      background: linear-gradient(transparent 62%, rgba(53, 106, 88, 0.18) 62%);
+    }
+
+    .editorial-goal {
+      margin-top: 22px;
+      padding: 18px 16px;
+      border-radius: 13px;
+      background: var(--indigo-deep);
+      color: #f4f1ea;
+      font-family: var(--font-serif);
+      font-size: 16.5px;
+      font-weight: 600;
+      line-height: 1.95;
+      letter-spacing: 0.03em;
+    }
+
+    .editorial-goal strong {
+      color: #ecd49e;
+    }
+
+    /* ---------- 確度（補章） ---------- */
+    .conf {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 15px 16px 16px;
+    }
+
+    .conf-high { border-left: 4px solid var(--green); }
+    .conf-mid { border-left: 4px solid var(--ochre); }
+    .conf-low { border-left: 4px solid var(--bengara); }
+
+    .conf-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .dots {
+      display: inline-flex;
+      gap: 4px;
+    }
+
+    .dots i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1.5px solid currentColor;
+    }
+
+    .dots i.on {
+      background: currentColor;
+    }
+
+    .conf-high .dots { color: var(--green); }
+    .conf-mid .dots { color: var(--ochre); }
+    .conf-low .dots { color: var(--bengara); }
+
+    .footer-space {
+      height: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 表紙 -->
+    <header class="hero">
+      <svg class="hero-ripple" viewBox="0 0 520 520" aria-hidden="true" focusable="false">
+        <circle cx="260" cy="260" r="7" fill="#2f4b63" opacity="0.45"/>
+        <circle cx="260" cy="260" r="38" fill="none" stroke="#2f4b63" stroke-width="3" opacity="0.28"/>
+        <circle cx="260" cy="260" r="82" fill="none" stroke="#2f4b63" stroke-width="2.6" opacity="0.22"/>
+        <circle cx="260" cy="260" r="132" fill="none" stroke="#3a6b5b" stroke-width="2.4" opacity="0.18"/>
+        <circle cx="260" cy="260" r="186" fill="none" stroke="#2f4b63" stroke-width="2.2" opacity="0.12"/>
+        <circle cx="260" cy="260" r="244" fill="none" stroke="#2f4b63" stroke-width="2" opacity="0.07"/>
+      </svg>
+      <div class="hero-meta">
+        <span class="hero-badge">2026年11月20日時点の自己理解と分析</span>
+        <span class="hero-badge">人間関係・仕事・子育ての指針</span>
+      </div>
+      <h1>自分の<wbr>怒り・<wbr>嫌悪感の<wbr>構造と、<wbr>今後の<wbr>人間関係・<wbr>仕事・<wbr>子育てへの<wbr>指針</h1>
+      <p class="hero-sub">対話を通じて整理した、自分の価値観、怒り・軽蔑が生じる構造、仕事と家庭での気づき、今後の判断基準と行動原則の記録</p>
+    </header>
+
+    <!-- 目次 -->
+    <nav class="toc" id="toc" aria-label="全体の構成">
+      <span class="toc-title">この記録の構成（全13章＋位置づけ・確度）</span>
+      <ol>
+        <li><a href="#sec1"><span class="toc-num">01</span><span class="toc-text">総合結論</span></a></li>
+        <li><a href="#sec2"><span class="toc-num">02</span><span class="toc-text">自分が<wbr>大切にしている<wbr>価値観</span></a></li>
+        <li><a href="#sec3"><span class="toc-num">03</span><span class="toc-text">怒りや<wbr>軽蔑が<wbr>生じる<wbr>主なポイント</span></a></li>
+        <li><a href="#sec4"><span class="toc-num">04</span><span class="toc-text">仕事上の<wbr>出来事からの<wbr>気づき</span></a></li>
+        <li><a href="#sec5"><span class="toc-num">05</span><span class="toc-text">自分自身の<wbr>厳しさと、<wbr>その盲点</span></a></li>
+        <li><a href="#sec6"><span class="toc-num">06</span><span class="toc-text">夫婦関係に<wbr>おける<wbr>怒りの構造</span></a></li>
+        <li><a href="#sec7"><span class="toc-num">07</span><span class="toc-text">子どもたちへの<wbr>最優先事項</span></a></li>
+        <li><a href="#sec8"><span class="toc-num">08</span><span class="toc-text">怒りを<wbr>減らし<wbr>楽になる<wbr>考え方</span></a></li>
+        <li><a href="#sec9"><span class="toc-num">09</span><span class="toc-text">一人事務所という<wbr>経営方針</span></a></li>
+        <li><a href="#sec10"><span class="toc-num">10</span><span class="toc-text">今後の<wbr>意思決定の<wbr>判断基準</span></a></li>
+        <li><a href="#sec11"><span class="toc-num">11</span><span class="toc-text">今回の<wbr>分析における<wbr>注意点</span></a></li>
+        <li><a href="#sec12"><span class="toc-num">12</span><span class="toc-text">最終的な<wbr>指針</span></a></li>
+        <li><a href="#sec13"><span class="toc-num">13</span><span class="toc-text">今後の<wbr>自分に<wbr>向けた<wbr>言葉</span></a></li>
+        <li><a href="#sec-meta"><span class="toc-num">補</span><span class="toc-text">この記録の<wbr>位置づけ・<wbr>確度</span></a></li>
+      </ol>
+    </nav>
+
+    <!-- 第1章 -->
+    <section class="ch" id="sec1">
+      <a class="ch-bar" href="#toc" aria-label="第01章 総合結論（タップで目次へ）"><span class="ch-bar-num">01</span><span class="ch-bar-title">総合結論</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">01</div>
+        <div>
+          <span class="ch-kicker">この記録の要点</span>
+          <h2>総合結論</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="core">
+          <span class="callout-title">強い怒り・嫌悪感の中心</span>
+          <p class="core-statement"><strong>「相手の立場や負担を想像せず、自分の要求を一方的に押し付ける人への嫌悪感」</strong></p>
+          <p>特に、自分自身はその難しさを十分に理解していないにもかかわらず、他人には高い要求水準を設け、その要求に応えられない人を厳しく評価する態度に、強い軽蔑を感じる。</p>
+        </div>
+
+        <div>
+          <div class="fig" role="img" aria-label="価値観と怒りの反応、および最重要課題の構造図">
+            <div class="fig-row">
+              <div class="fig-box fig-tolerant">
+                <span class="fig-title">比較的寛容な領域</span>
+                <p class="fig-main">人間の<wbr>能力差・<wbr>不完全さ・<wbr>ミスそのもの</p>
+                <p class="fig-note">（理解しており、<wbr>人格否定に<wbr>つなげない）</p>
+              </div>
+              <div class="fig-box fig-react">
+                <span class="fig-title">強く反応する領域</span>
+                <p class="fig-main">想像力・<wbr>敬意・<wbr>自己認識・<wbr>責任感を<wbr>欠く態度</p>
+                <p class="fig-note">（一方的な<wbr>高い要求と<wbr>厳しい評価）</p>
+              </div>
+            </div>
+            <div class="fig-arrows" aria-hidden="true">
+              <span></span>
+              <svg viewBox="0 0 16 30"><line x1="8" y1="2" x2="8" y2="22" stroke="#9a4a36" stroke-width="2.5"/><path d="M2 20 L8 28 L14 20 z" fill="#9a4a36"/></svg>
+            </div>
+            <div class="fig-row">
+              <div class="fig-box fig-keep">
+                <span class="fig-title">変える<wbr>必要がないもの</span>
+                <p class="fig-main">自分が<wbr>大切にしている<wbr>価値観</p>
+                <p class="fig-note">（維持したまま<wbr>進む）</p>
+              </div>
+              <div class="fig-box fig-risk">
+                <span class="fig-title">リスク：<wbr>軽蔑と<wbr>怒りの<wbr>増幅</span>
+                <p class="fig-main">価値観に<wbr>反する人への<wbr>強い反応が<wbr>自分の判断や<wbr>行動を<wbr>損なうおそれ</p>
+              </div>
+            </div>
+            <div class="fig-arrows" aria-hidden="true">
+              <svg viewBox="0 0 16 30"><line x1="8" y1="2" x2="8" y2="22" stroke="#356a58" stroke-width="2.5"/><path d="M2 20 L8 28 L14 20 z" fill="#356a58"/></svg>
+              <svg viewBox="0 0 16 30"><line x1="8" y1="2" x2="8" y2="22" stroke="#2f4b63" stroke-width="2.5"/><path d="M2 20 L8 28 L14 20 z" fill="#2f4b63"/></svg>
+            </div>
+            <div class="fig-goal">
+              <span class="fig-title">最も重要な課題（変えるべき対象）</span>
+              <p class="fig-goal-main">受け止め方と対処方法の更新</p>
+              <p>価値観は維持しつつ、<wbr>反する人に<wbr>遭遇したときの<wbr>軽蔑や怒りによって、<wbr>自分自身の<wbr>判断や行動が<wbr>損なわれないようにする</p>
+            </div>
+          </div>
+          <p class="caption">※上図は、第1章で整理された「寛容な領域／強く反応する領域」と「維持するもの／変えるもの」の関係を一覧化したものです。</p>
+        </div>
+
+        <div class="card card-top-teal">
+          <h3>不完全さへの<wbr>理解と<wbr>反応の軸</h3>
+          <p>自分は人間の能力差や不完全さを理解しており、他人のミスそのものには比較的寛容である。能力が低いことやミスをすることよりも、<strong>想像力、敬意、自己認識、責任感</strong>を欠いた態度に強く反応する。</p>
+        </div>
+
+        <div class="card card-top-navy">
+          <h3>変えるべきもの・<wbr>変えなくてよいもの</h3>
+          <p>自分の価値観を変える必要があるという意味ではない。自分が大切にしている価値観は維持しながら、その価値観に反する人と遭遇した際の<strong>受け止め方と対処方法</strong>を変えていくことが最も重要な課題である。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec2"><span><span class="to-next-label">次の章</span><span class="to-next-title">02 自分が大切にしている価値観</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第2章 -->
+    <section class="ch" id="sec2">
+      <a class="ch-bar" href="#toc" aria-label="第02章 自分が大切にしている価値観（タップで目次へ）"><span class="ch-bar-num">02</span><span class="ch-bar-title">自分が大切にしている価値観</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">02</div>
+        <div>
+          <span class="ch-kicker">判断の土台</span>
+          <h2>自分が<wbr>大切にしている<wbr>価値観</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">2-1</span>
+          <h3>人間としての<wbr>対等性</h3>
+          <p>社会的地位、学歴、収入、職業、役職によって、人間としての尊厳に優劣をつけたくない。社長であっても、パートタイムで働く人であっても、飲食店の店員であっても、一人の人間として丁寧に接したい。</p>
+          <p>仕事上の責任や権限には違いがあるが、それは人間としての上下関係を意味しない。そのため、飲食店の店員に横柄な態度を取る人には、友人関係を続けたくないと感じるほど強い嫌悪感を抱く。</p>
+          <div class="callout callout-teal">
+            <p><strong>自分にとっての敬意：</strong>相手の社会的地位や能力に対する報酬ではなく、人間関係の基本的な姿勢である。</p>
+          </div>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">2-2</span>
+          <h3>相手の立場を<wbr>想像すること</h3>
+          <p>大切にしている資質の一つが想像力である。他人に何かを要求するときには、相手の<strong>経験、能力、時間、負担、感情</strong>などを想像する必要があると考えている。</p>
+          <p>特に仕事では、理論上<strong>2〜3時間</strong>で終わる作業でも、実際には確認事項や想定外の問題が発生し、<strong>4〜5時間</strong>かかることは珍しくない。そのような実務上の不確実性を考えず、「簡単だからやっておいて」と指示する人に強い違和感を覚える。</p>
+          <div class="callout callout-teal">
+            <p><strong>重要な姿勢：</strong>仕事の難しさを正確に理解できるかどうかだけでなく、自分には分かっていないことがあると認識し、相手の負担を理解しようとする姿勢があるかどうかである。</p>
+          </div>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">2-3</span>
+          <h3>人間の<wbr>不完全さへの<wbr>寛容さ</h3>
+          <p>人間はミスをするものであり、自分自身も例外ではない。そのため、他人がミスをしたという事実だけで、その人の人格や仕事への姿勢まで否定したくない。</p>
+          <p>ミスが繰り返されれば改善は必要だが、<strong>改善を求めることと、相手を責めたり軽蔑したりすることは別</strong>である。能力や経験には個人差があり、同じ成果をすべての人に要求することが合理的とは限らない。</p>
+          <div class="callout callout-teal">
+            <p><strong>向き合い方：</strong>間違いは改善してもらいたいが、間違いをした人に対する敬意は失いたくない。</p>
+          </div>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">2-4</span>
+          <h3>自分にも<wbr>他人にも<wbr>誠実であること</h3>
+          <p>自分自身に対する要求水準は高いと認識している。自分で考えること、責任を果たすこと、想像力を働かせること、約束やルールを守ることなどを大切にしており、他人にも同様の姿勢を期待する傾向がある。</p>
+          <p>ただし、仕事の能力まで自分と同じ水準を要求しているわけではない。むしろ、能力や経験に差があることは当然だと考えている。</p>
+          <div class="callout callout-teal">
+            <p><strong>重要な違い：</strong>能力の差は受け入れられるが、誠実さや他人への敬意が欠けていると感じることには、強い抵抗がある。</p>
+          </div>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec3"><span><span class="to-next-label">次の章</span><span class="to-next-title">03 怒りや軽蔑が生じる主なポイント</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第3章 -->
+    <section class="ch" id="sec3">
+      <a class="ch-bar" href="#toc" aria-label="第03章 怒りや軽蔑が生じる主なポイント（タップで目次へ）"><span class="ch-bar-num">03</span><span class="ch-bar-title">怒りや軽蔑が生じる主なポイント</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">03</div>
+        <div>
+          <span class="ch-kicker">反応が生まれる場所</span>
+          <h2>怒りや<wbr>軽蔑が<wbr>生じる<wbr>主なポイント</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>怒りの対象</th>
+                <th>嫌悪感の核心</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-key">相手を<wbr>見下す態度</td>
+                <td>社会的地位や立場によって敬意を変えること</td>
+              </tr>
+              <tr>
+                <td class="td-key">想像力の<wbr>欠如</td>
+                <td>相手の能力、感情、負担、事情を考慮しないこと</td>
+              </tr>
+              <tr>
+                <td class="td-key">一方的な<wbr>要求</td>
+                <td>仕事の難しさを理解せず、高い水準を当然のように求めること</td>
+              </tr>
+              <tr>
+                <td class="td-key">自己認識の<wbr>不足</td>
+                <td>自分自身の限界や問題を十分に認識せず、他人を厳しく評価すること</td>
+              </tr>
+              <tr>
+                <td class="td-key">責任の<wbr>押し付け</td>
+                <td>指示や環境を決めた側が、その問題を検証せず担当者だけを責めること</td>
+              </tr>
+              <tr>
+                <td class="td-key">立場の<wbr>弱い人への<wbr>攻撃</td>
+                <td>反論しにくい人に対して、強い言葉や態度を向けること</td>
+              </tr>
+              <tr>
+                <td class="td-key">同じ問題の<wbr>繰り返し</td>
+                <td>何度伝えても改善が見られず、相手が学ぼうとしていないように感じること</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-coral">
+          <span class="callout-title">7項目に<wbr>共通する<wbr>本質</span>
+          <p>単なる能力不足ではなく、<strong>他人に何かを要求する際の姿勢</strong>や、<strong>その要求に伴う責任の取り方</strong>にある。</p>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">3-1</span>
+          <h3>「自分が<wbr>できないのに<wbr>他人に<wbr>要求する」<wbr>ことへの<wbr>嫌悪感</h3>
+          <p>今回、特に強く認識した感情である。自分にはできない、あるいは自分自身も十分に実践していないことを、他人には当然のように要求する態度に強い不公平感を覚える。</p>
+          <p>ただし重要な区別がある。経営者や管理者が、自分にはできない専門的な仕事を他人に任せること自体は合理的である。問題なのは、その難しさを軽視したり、必要な支援や環境を整えずに成果だけを求めたりすることである。</p>
+          <div class="quote-principle">
+            「自分にできないことを他人に求めるなら、なおさらその難しさを理解し、相手への敬意と適切な支援を欠いてはならない」
+          </div>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">3-2</span>
+          <h3>要求する側の<wbr>責任に<wbr>対する<wbr>厳しさ</h3>
+          <p>人に仕事を任せる場合、<strong>成果への要求</strong>と、<strong>成果を出せる環境を整える責任</strong>は切り離せない。</p>
+          <p>短時間勤務の担当者に複数の業務を任せるのであれば、業務範囲、指示内容、確認方法、勤務時間、教育機会などを考慮する必要がある。繰り返しミスが起きる場合は、本人の能力や注意不足だけでなく、<strong>業務設計に問題がないか</strong>も検証すべきである。</p>
+          <p>これは担当者の責任を免除する意味ではない。権限を持つ側が、自分の責任を十分に検証せず、相手だけに責任を求めることへの嫌悪感である。</p>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">3-3</span>
+          <h3>大切な人が<wbr>傷つくことへの<wbr>強い反応</h3>
+          <p>自分自身が不快な扱いを受けた場合と、大切な人が不当な扱いを受けたと感じた場合では、怒りの強さが異なる。</p>
+          <p>特に<strong>子どもが傷ついていると感じる場面</strong>では、非常に強い怒りが生じる。この点には、想像力や公正さへの価値観に加えて、<strong>子どもを守りたいという強い感情</strong>が関係していると考えられる。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec4"><span><span class="to-next-label">次の章</span><span class="to-next-title">04 仕事上の出来事からの気づき</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第4章 -->
+    <section class="ch" id="sec4">
+      <a class="ch-bar" href="#toc" aria-label="第04章 仕事上の出来事からの気づき（タップで目次へ）"><span class="ch-bar-num">04</span><span class="ch-bar-title">仕事上の出来事からの気づき</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">04</div>
+        <div>
+          <span class="ch-kicker">具体的な場面から</span>
+          <h2>今回の<wbr>仕事上の<wbr>出来事から<wbr>得られた<wbr>気づき</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-navy">
+          <span class="tag tag-navy">4-1 出来事の整理</span>
+          <h3>L社・<wbr>K社長との<wbr>出来事<wbr>（2026年11月20日）</h3>
+
+          <div class="sub">
+            <span class="tag tag-coral">起きたこと・感じたこと</span>
+            <p>L社の税務・経理業務に関連して、ミスコミュニケーションと思われる問題が発生。K社長からChatworkで担当者や自分の対応に問題があるかのような指摘を受け、その伝え方に強い不快感を覚えた。</p>
+            <p>当日の指摘後、担当者のTさんから退職の意向が伝えられた。本人は以前からミスを気にしており、業務を続ける自信を失っていたことを説明していた。</p>
+          </div>
+
+          <div class="sub">
+            <span class="tag tag-amber">未確定事項・多面的な評価</span>
+            <ul class="styled-list amber">
+              <li>事実関係（K社長側、担当者側、自分自身のいずれに問題があったか）は十分に確定していない。</li>
+              <li>Tさんの退職の直接的な原因が当日の指摘にあったかどうかも確定していない。</li>
+              <li>K社長の返信には謝罪、感謝、業務内容や勤務時間の調整への言及もあり、この対応は評価から除外すべきではない。</li>
+            </ul>
+          </div>
+
+          <div class="sub">
+            <span class="tag tag-teal">評価と再認識した視点</span>
+            <p>事実関係が未確定であっても、相手の問題を指摘する際の言葉遣いや態度には配慮が必要だと考えている。</p>
+            <p>Tさんは短時間で複数の業務を担っており、一定のミスはあったものの、全体として十分に仕事に取り組んでいたという評価を持っている。今回、<strong>本人の能力に関する問題</strong>と、<strong>業務設計や指導方法の問題</strong>を分けて考える必要性を改めて認識した。</p>
+          </div>
+        </div>
+
+        <div class="card card-top-amber">
+          <span class="tag tag-amber">4-2 疲労の影響</span>
+          <h3>今回の<wbr>怒りが<wbr>強くなった<wbr>背景</h3>
+          <p><strong>TG社</strong>の案件、<strong>T社</strong>、<strong>J社</strong>の決算、<strong>M社</strong>など、複数の仕事が重なり、精神的・認知的な余裕が減っていた。この疲労が、普段よりも強い怒りを生じさせた可能性がある。</p>
+          <p>ただし、疲れていたからといって、感じた違和感そのものが不合理だったことにはならない。</p>
+          <div class="callout callout-amber">
+            <p><strong>分けて評価すべき2点：</strong>「怒りの理由が妥当かどうか」と「怒りの強さが適切かどうか」は、別々に評価する必要がある。</p>
+          </div>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">4-3 顧客選別</span>
+          <h3>今後の<wbr>顧客選別への<wbr>示唆</h3>
+          <p>当事務所の目的は、売上や顧客数の最大化ではない。専門家として価値ある仕事を行い、<strong>経済的安定と自由な人生を両立すること</strong>である。顧問先との関係が継続的なストレスの原因となる場合、報酬額だけを理由に契約を維持する必要はない。</p>
+          <p>ただし、<strong>一度の不適切な言動</strong>と、<strong>継続的に相互尊重が成立しない関係</strong>とは区別する。今後は次の4視点で判断する。</p>
+          <ul class="styled-list">
+            <li>相手との間に、基本的な敬意と信頼があるか。</li>
+            <li>要求水準と業務範囲、報酬、責任分担が合理的か。</li>
+            <li>問題発生後に、事実確認や改善に向けた対話が成立するか。</li>
+            <li>その関係を維持することが、自分の精神的な自由を過度に損なっていないか。</li>
+          </ul>
+          <p>顧問先を大切にすることと、すべての顧問契約を維持することは同じではない。一方、契約終了を考える場合にも、感情的な対立を避け、必要な業務の引継ぎや説明は誠実に行う。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec5"><span><span class="to-next-label">次の章</span><span class="to-next-title">05 自分自身の厳しさと、その盲点</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第5章 -->
+    <section class="ch" id="sec5">
+      <a class="ch-bar" href="#toc" aria-label="第05章 自分自身の厳しさと、その盲点（タップで目次へ）"><span class="ch-bar-num">05</span><span class="ch-bar-title">自分自身の厳しさと、その盲点</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">05</div>
+        <div>
+          <span class="ch-kicker">自分に向ける目</span>
+          <h2>自分自身の<wbr>厳しさと、<wbr>その盲点</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-amber">
+          <span class="tag tag-amber">5-1 厳しさの非対称性</span>
+          <h3>能力に<wbr>寛容でも、<wbr>価値観には<wbr>厳しい</h3>
+          <p>自分は他人に厳しいという自己認識を持っているが、その厳しさは一様ではない。他人の能力差やミスには一定の寛容さがある一方、<strong>敬意、想像力、自己認識、誠実さ</strong>を欠いていると感じる人には非常に厳しい。</p>
+          <p>この区別は今後の自己理解に役立つ。ただし、本人が努力しているか、想像力を働かせようとしているかという内面的な姿勢は、外部から完全には判断できない。<strong>一度の言動から、その人の人格全体を結論づけない</strong>ことが重要である。</p>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">5-2 評価軸の分離</span>
+          <h3>同じ物差しで<wbr>測ることの<wbr>限界</h3>
+          <p>自分自身に高い基準を設定し、その基準を他人にも適用する傾向がある。公平さにつながる反面、相手の能力、経験、役割、環境の違いを十分に反映できない危険もある。</p>
+          <div class="quote-principle">
+            「人間としての尊厳は等しく尊重する。一方、仕事上の要求水準や責任は、役割・能力・権限・環境に応じて設定する」
+          </div>
+          <p>同じ成果を求めることが公平なのではなく、合理的な条件で評価することが重要である。</p>
+        </div>
+
+        <div class="card card-top-navy">
+          <span class="tag tag-navy">5-3 言葉と捉え方の見直し</span>
+          <h3>「頭が悪い」<wbr>という<wbr>評価について</h3>
+          <p>想像力がない人、ルールを守らない人、自分で考えようとしない人などに対し、「頭が悪い」という表現を使う傾向がある。これは知能の客観的評価ではなく、強い軽蔑を表す言葉であると自覚しており、今後少しずつ見直していきたい。</p>
+          <p>重要なのは言葉を穏やかに置き換えるだけでなく、人格全体の評価を<strong>具体的な行動や判断への評価</strong>に置き換えることである。これが怒りを必要以上に増幅させないための重要な方法となる。</p>
+          <div class="compare">
+            <div class="compare-box before">
+              <span class="tag tag-coral">見直したい捉え方（人格全体）</span>
+              <p>「頭が悪い人」「想像力がない人」と決めつける</p>
+            </div>
+            <div class="compare-arrow" aria-hidden="true">↓</div>
+            <div class="compare-box after">
+              <span class="tag tag-teal">目指す捉え方（具体的行動・判断）</span>
+              <p>「今回の要求には相手の負担への考慮が不足していた」と捉える</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">5-4 最も注意すべき盲点</span>
+          <h3>自分が<wbr>嫌悪する<wbr>態度を、<wbr>自分も<wbr>取る可能性</h3>
+          <p>自分は他人への敬意を大切にしているが、その敬意を欠いていると感じる相手に対して、強い軽蔑を抱くことがある。その結果、自分自身も相手を見下したり、暴言を吐いたりする可能性がある。</p>
+          <div class="callout callout-coral">
+            <span class="callout-title">内面にある<wbr>重要な<wbr>緊張関係</span>
+            <p><strong>「相手への敬意を欠いた人を軽蔑するあまり、自分自身も相手への敬意を失ってしまう」</strong></p>
+          </div>
+          <p>この状態を避けることは、自分が本来大切にしている価値観を守ることにつながる。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec6"><span><span class="to-next-label">次の章</span><span class="to-next-title">06 夫婦関係における怒りの構造</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第6章 -->
+    <section class="ch" id="sec6">
+      <a class="ch-bar" href="#toc" aria-label="第06章 夫婦関係における怒りの構造（タップで目次へ）"><span class="ch-bar-num">06</span><span class="ch-bar-title">夫婦関係における怒りの構造</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">06</div>
+        <div>
+          <span class="ch-kicker">家庭の中で</span>
+          <h2>夫婦関係に<wbr>おける<wbr>怒りの構造</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-navy">
+          <span class="tag tag-navy">6-1 現状と目標</span>
+          <h3>現在の<wbr>夫婦関係</h3>
+          <p>現在、夫婦間の情緒的なつながりはかなり薄くなっていると感じている。頻繁に喧嘩をするわけではないが、それは必ずしも良好な関係によるものではなく、お互いの距離が大きくなっているためかもしれない。</p>
+          <p>妻を積極的に嫌っているわけではないが、夫婦関係を無理に改善したいという意欲も強くない。家族4人で生活を続けている大きな理由は、<strong>子どもたちが両親と一緒に暮らすことを望んでいるため</strong>である。</p>
+          <div class="callout">
+            <p><strong>今後の目標：</strong>夫婦としての親密さを回復することよりも、子どもたちにとって安心できる家庭環境を維持すること。</p>
+          </div>
+        </div>
+
+        <div class="card card-top-amber">
+          <span class="tag tag-amber">6-2 学習をめぐる摩擦</span>
+          <h3>子どもの<wbr>勉強を<wbr>めぐる怒り</h3>
+          <p>自宅勤務もあり、在宅している日は基本的に自分が子どもの宿題を見ている。これは義務感だけではなく、子どものことが好きで、成長に関わること自体に喜びを感じているためである。</p>
+          <p>一方、妻が子どもに対して強い言葉で勉強を要求することがあり、その言い方に強い嫌悪感を覚える。特に、自分自身は学習に積極的に取り組んできたわけではないように見える妻が、子どもには厳しく勉強を要求することに不公平感を感じている。</p>
+          <div class="callout callout-amber">
+            <p><strong>整理すべき視点：</strong>親自身の学歴や過去の勉強量によって、子どもに学習を促す資格が決まるわけではない。重要なのは、子どもの気持ちや学習の難しさを理解し、適切な方法で働きかけているかどうか。「勉強しなさい」と強く要求するだけでなく、「一緒にやってみようか」と声をかけるなど、子どもが前向きに取り組めるよう工夫してほしいと考えている。</p>
+          </div>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">6-3 強い怒りの構造と留保</span>
+          <h3>子どもが<wbr>泣いていた<wbr>ことによる<wbr>怒り</h3>
+          <p>妻の強い言い方によって子どもが泣いていた場面では、特に激しい怒りが生じ、自分自身も妻に暴言を吐いてしまった。ここには二つの感情が重なっていたと考えられる。</p>
+          <ul class="styled-list coral">
+            <li><strong>第一：</strong>相手の立場や気持ちを想像しない言動への嫌悪感。</li>
+            <li><strong>第二：</strong>最も大切な子どもが傷ついていると感じたことによる、強い保護感情。</li>
+          </ul>
+          <p>さらに、何度伝えても同様の問題が繰り返されているという認識が、怒りを増幅させている可能性がある。単なる妻への不満ではなく、自分が大切にしている子育ての価値観に深く関係している。</p>
+          <div class="callout callout-amber">
+            <span class="callout-title">事実と<wbr>感情を<wbr>分けるための<wbr>留保</span>
+            <p>子どもが泣いたという結果だけで、直ちに指導のすべてが不適切だったと断定することはできない（実際の言葉、頻度、子どもの反応を踏まえて判断する必要がある）。また、妻が担っている育児・家事全体の負担については、宿題を見ている時間だけでは評価できない。</p>
+          </div>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec7"><span><span class="to-next-label">次の章</span><span class="to-next-title">07 子どもたちへの最優先事項</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第7章 -->
+    <section class="ch" id="sec7">
+      <a class="ch-bar" href="#toc" aria-label="第07章 子どもたちへの最優先事項（タップで目次へ）"><span class="ch-bar-num">07</span><span class="ch-bar-title">子どもたちへの最優先事項</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">07</div>
+        <div>
+          <span class="ch-kicker">子どもたちの安心</span>
+          <h2>子どもたちに<wbr>とって、<wbr>何を<wbr>最優先に<wbr>すべきか</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">7-1 家庭の基盤</span>
+          <h3>家庭が<wbr>安心できる<wbr>場所であること</h3>
+          <p>最も重要なのは、<strong>長女と次女が安心して成長できること</strong>である。子どもが失敗しても責められず、困ったときには相談でき、自分の感情を否定されない家庭環境を大切にしたい。</p>
+          <p>教育においても、単に結果を求めるのではなく、<strong>自発性、安心感、自己肯定感、学ぶことへの興味</strong>を重視する。子どもに努力を求めることと、子どもの気持ちを尊重することは両立できる。</p>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">7-2 姿勢で伝える</span>
+          <h3>親の価値観を<wbr>押し付けすぎない</h3>
+          <p>子どもには、他人の気持ちを想像できる人になってほしいと願っている。ただし、想像力や優しさも、親が一方的に要求すれば身につくものではない。</p>
+          <p>親自身が日常生活で他人に敬意を持って接し、間違ったときには認め、相手の気持ちを一緒に考える姿勢を見せることが重要である。学習についても、本人の<strong>年齢、性格、疲労、理解度</strong>に応じて、適切な働きかけを考える。</p>
+        </div>
+
+        <div class="card card-top-navy">
+          <span class="tag tag-navy">7-3 協力と境界</span>
+          <h3>夫婦関係と<wbr>子どもの<wbr>安心を<wbr>分けて考える</h3>
+          <p>夫婦として親密である必要はないが、子どもの前で互いを攻撃したり、軽蔑を表現したりしないことは重要である。頻繁に喧嘩しないことだけでは安心は保証されず、親同士の冷たい関係や緊張感も子どもに伝わる可能性がある。</p>
+          <p>だからこそ、夫婦関係の改善を無理に目指さなくても、親として必要な協力と最低限の敬意を維持することには意味がある。</p>
+          <ul class="styled-list navy">
+            <li>子どもが泣いている場面では、まず子どもの気持ちを受け止め、必要に応じてその場の学習ややり取りを中断する。</li>
+            <li>妻への不満や教育方針の違いは、子どもがいない場所で扱うことを基本とする。</li>
+          </ul>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">7-4 特に重視したい行動原則</span>
+          <h3>最も<wbr>避けたいこと</h3>
+          <p>子どもを守りたいという気持ちから、妻に強い言葉を向け、その結果として子どもが両親の衝突にもさらされてしまうことは避けたい。妻の言い方が不適切だったとしても、それによって自分の暴言が正当化されるわけではない。</p>
+          <div class="callout callout-coral">
+            <p><strong>万一、子どもの前で暴言を吐いてしまった場合：</strong>後からでも自分の言動について謝り、子どもに責任がないことを伝える。</p>
+            <p><strong>原則：</strong>子どもを守りたいという思いを、子どもをさらに不安にさせる行動につなげないこと。</p>
+          </div>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec8"><span><span class="to-next-label">次の章</span><span class="to-next-title">08 怒りを減らし楽になる考え方</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第8章 -->
+    <section class="ch" id="sec8">
+      <a class="ch-bar" href="#toc" aria-label="第08章 怒りを減らし楽になる考え方（タップで目次へ）"><span class="ch-bar-num">08</span><span class="ch-bar-title">怒りを減らし楽になる考え方</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">08</div>
+        <div>
+          <span class="ch-kicker">怒りとの付き合い方</span>
+          <h2>怒りを<wbr>減らし、<wbr>自分自身が<wbr>楽になるための<wbr>考え方</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">8-1</span>
+          <h3>怒りと<wbr>軽蔑を<wbr>区別する</h3>
+          <p><strong>怒り</strong>は特定の言動に対する反応である一方、<strong>軽蔑</strong>はその人自身に対する否定的な評価に発展しやすい。強い怒りが軽蔑に変わると、相手の言動を冷静に評価することが難しくなる可能性がある。</p>
+          <p>そのため、「今回の言動は不適切だった」という評価と、「この人は人間として尊敬できない」という評価を、できる限り分けて考える。相手を好きになる必要も、無理に許す必要もないが、嫌悪感だけで相手のすべてを判断しないことが、自分自身の精神的な負担を軽減することにつながる。</p>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">8-2</span>
+          <h3>自分が<wbr>変えられることに<wbr>集中する</h3>
+          <p>相手の性格、価値観、判断力を直接変えることは難しい。何度説明しても変わらない場合、さらに強い言葉で説得しようとしても必ずしも改善しない。相手を変えることにエネルギーを使い続けず、自分が変更できる範囲を考える。相手に自分の正しさを認めさせることよりも、<strong>自分が望む生活を実現すること</strong>を優先する。</p>
+          <div class="compare">
+            <div class="compare-box plain">
+              <span class="tag tag-navy">仕事で変えられる範囲</span>
+              <p>契約条件、業務範囲、コミュニケーション方法、顧問契約の継続可否</p>
+            </div>
+            <div class="compare-gap" aria-hidden="true"></div>
+            <div class="compare-box plain">
+              <span class="tag tag-teal">家庭で変えられる範囲</span>
+              <p>自分の子どもへの関わり方、妻との距離の取り方、子どもの前での振る舞い</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-top-navy">
+          <span class="tag tag-navy">8-3 整理の手順</span>
+          <h3>怒りが<wbr>強いときは、<wbr>相手の人格を<wbr>評価しない</h3>
+          <p>感情が高ぶったときには、相手の行動だけでなく能力や人格全体を否定したくなる。特に「頭が悪い」「何も分かっていない」といった評価は、怒りをさらに強くする可能性がある。相手の人格を評価する前に、次の順序で今回の具体的な行動と自分の目的を確認する。</p>
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <div class="step-title">事実</div>
+                <p>実際に何が起きたのか。</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <div class="step-title">解釈</div>
+                <p>自分はそれをどう受け止めたのか。</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <div class="step-title">感情</div>
+                <p>なぜ怒りや軽蔑が生じたのか。</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <div class="step-title">目的</div>
+                <p>本当は何を守りたいのか。</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <div>
+                <div class="step-title">行動</div>
+                <p>目的を達成するために、何をするのが合理的か。</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="card card-top-amber">
+          <span class="tag tag-amber">8-4 判断の時期</span>
+          <h3>疲労による<wbr>影響を<wbr>考慮する</h3>
+          <p>仕事が重なり、判断や対応を求められる時間が長くなると、他人に対する寛容さが低下する可能性がある。強い怒りを感じたときは、相手の問題だけでなく、<strong>自分の疲労や余裕のなさ</strong>も確認する。</p>
+          <p>疲れていることは怒りの理由を否定するものではないが、<strong>判断の時期を変える理由</strong>にはなる。重要な契約判断や夫婦間の話し合いは、強い怒りが残っているときには行わない。</p>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">8-5 具体的対応</span>
+          <h3>暴言を<wbr>防ぐための<wbr>具体的な対応</h3>
+          <ul class="styled-list coral">
+            <li>暴言を吐きそうだと感じた場合は、説得や反論を継続せず、<strong>いったんその場を離れること</strong>を優先する。</li>
+            <li>子どもがいる場合は、子どもへの対応を先に行い、夫婦間の議論を続けない。</li>
+            <li>時間を置いた後、人格評価ではなく具体的な言動について必要なことだけを伝える。</li>
+            <li>暴言を吐いてしまった場合には、相手の言動への評価とは切り離して、自分の言い方について責任を引き受ける。</li>
+            <li>同様のことが繰り返され、自力で抑えることが難しい場合には、<strong>心理職などの第三者</strong>と怒りへの対処方法を検討することも合理的な選択肢となる。</li>
+          </ul>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec9"><span><span class="to-next-label">次の章</span><span class="to-next-title">09 一人事務所という経営方針</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第9章 -->
+    <section class="ch" id="sec9">
+      <a class="ch-bar" href="#toc" aria-label="第09章 一人事務所という経営方針（タップで目次へ）"><span class="ch-bar-num">09</span><span class="ch-bar-title">一人事務所という経営方針</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">09</div>
+        <div>
+          <span class="ch-kicker">性格と働き方</span>
+          <h2>一人事務所という<wbr>経営方針との<wbr>関係</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-navy">
+          <h3>性格・<wbr>価値観との<wbr>適合性</h3>
+          <p>一人事務所という経営方針が、収益性や時間の自由度だけでなく、自分自身の性格や価値観にも適合している可能性が明確になった。</p>
+          <p>自分は専門能力や判断力を発揮する仕事を好む一方、他人の行動や判断を継続的に管理することには強いストレスを感じる可能性がある。特に相手の想像力や誠実さに対して高い期待を持つため、組織を拡大して多様な価値観の人を管理することは、自分の幸福度を下げるかもしれない。</p>
+          <p>ただし、これだけで組織経営に不向きだと断定することはできない。現在の一人事務所という方針は、経済的な成功と自由を維持しながら、自分の能力を直接発揮できるという点で合理的である。</p>
+        </div>
+
+        <div class="card card-top-teal">
+          <h3>今後の<wbr>最適化と<wbr>協働の原則</h3>
+          <p>一人事務所は、他人と協力できないから選ぶ形態ではなく、<strong>自分の能力と価値観を生かしやすい経営形態</strong>である。</p>
+          <div class="callout callout-teal">
+            <span class="callout-title">規模拡大より<wbr>優先する<wbr>4項目</span>
+            <p><strong>顧客構成 ／ 仕事の質 ／ 時間の自由度 ／ 精神的な負担の最適化</strong></p>
+          </div>
+          <p>他人と協働する場合には、相手に自分と同じ能力を求めるのではなく、<strong>役割や期待水準を明確にし、お互いの強みを生かせる関係</strong>を構築する。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec10"><span><span class="to-next-label">次の章</span><span class="to-next-title">10 今後の意思決定の判断基準</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第10章 -->
+    <section class="ch" id="sec10">
+      <a class="ch-bar" href="#toc" aria-label="第10章 今後の意思決定の判断基準（タップで目次へ）"><span class="ch-bar-num">10</span><span class="ch-bar-title">今後の意思決定の判断基準</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">10</div>
+        <div>
+          <span class="ch-kicker">迷ったときの物差し</span>
+          <h2>今後の<wbr>意思決定に<wbr>使う<wbr>判断基準</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">10-1 感情の点検</span>
+          <h3>他人に<wbr>怒りを<wbr>感じたとき</h3>
+          <p>自分が怒っている理由を、次の5つの観点から確認する。</p>
+          <ul class="styled-list coral">
+            <li>相手が実際に敬意を欠いたのか、それとも自分がそう解釈したのか。</li>
+            <li>相手の能力不足と、誠実さや想像力の不足を混同していないか。</li>
+            <li>自分の期待水準が、その人の役割や環境に照らして合理的か。</li>
+            <li>今回の一度の行動を、その人の人格全体の評価に広げていないか。</li>
+            <li>相手を批判することは、本当に自分の目的達成につながるか。</li>
+          </ul>
+        </div>
+
+        <div class="card card-top-navy">
+          <span class="tag tag-navy">10-2 仕事・顧客</span>
+          <h3>顧客との<wbr>関係を<wbr>判断するとき</h3>
+          <p>問題が起きたら、まず<strong>事実関係と業務上の責任</strong>を確認する。その上で、要求水準、報酬、業務負担、相互尊重、改善可能性を考える。</p>
+          <p>一度の言い方が不適切だったことだけで即座に契約終了を判断する必要はない。ただし、問題が繰り返され、信頼関係や精神的な自由を継続的に損なう場合には、<strong>契約条件の見直しや契約終了を積極的に検討してよい</strong>。</p>
+        </div>
+
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">10-3 家庭・子育て</span>
+          <h3>妻との<wbr>意見が<wbr>異なるとき</h3>
+          <p>最優先するのは、自分の正しさを証明することではなく、<strong>子どもの安心と成長</strong>である。</p>
+          <p>妻の言い方に問題を感じた場合も、その場で妻を批判することが最善とは限らない。必要に応じて子どもを安心させ、その場の緊張を和らげ、夫婦間の問題は別の機会に扱う。</p>
+          <p>妻の考え方を変えられないとしても、自分自身の子どもへの接し方を通じて、望ましい家庭環境をつくる余地はある。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec11"><span><span class="to-next-label">次の章</span><span class="to-next-title">11 今回の分析における注意点</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第11章 -->
+    <section class="ch" id="sec11">
+      <a class="ch-bar" href="#toc" aria-label="第11章 今回の分析における注意点（タップで目次へ）"><span class="ch-bar-num">11</span><span class="ch-bar-title">今回の分析における注意点</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">11</div>
+        <div>
+          <span class="ch-kicker">断定しないこと</span>
+          <h2>今回の<wbr>分析における<wbr>注意点</h2>
+        </div>
+      </div>
+
+      <p class="ch-lead">今回の対話では、自分の考えを言語化することが中心だったため、K社長や妻の立場から十分に事情を確認したわけではない。そのため、次の6事項については<strong>現時点で断定しない</strong>。</p>
+
+      <div class="stack">
+        <div class="card card-top-amber">
+          <h3>現時点で<wbr>断定しない<wbr>6つの事項</h3>
+          <ul class="styled-list amber">
+            <li>K社長に、担当者への敬意や想像力が実際に欠けているか。</li>
+            <li>Tさんの退職意向が、当日の指摘によってどの程度生じたか。</li>
+            <li>Tさんのミスについて、本人の問題と業務設計上の問題がどの程度存在したか。</li>
+            <li>妻が子どもに強く勉強を促す理由や、実際の心理状態。</li>
+            <li>夫婦の現在の関係が、子どもたちにどの程度影響しているか。</li>
+            <li>自分自身が他人に対してどの程度厳しいかについての客観的評価。</li>
+          </ul>
+        </div>
+
+        <div class="card card-top-navy">
+          <h3>自己認識と<wbr>判断の<wbr>正確さの区別</h3>
+          <p>自分は想像力や仕事の能力が高いという自己認識を持っているが、それによって他人の判断や人格を正確に評価できるとは限らない。</p>
+          <div class="quote-principle">
+            「自分の価値観が正しいと感じること」と「個別の相手についての判断が正しいこと」は別である。
+          </div>
+          <p>この区別を維持することが、今後の自己理解における重要な注意点となる。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec12"><span><span class="to-next-label">次の章</span><span class="to-next-title">12 最終的な指針</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第12章 -->
+    <section class="ch" id="sec12">
+      <a class="ch-bar" href="#toc" aria-label="第12章 最終的な指針（タップで目次へ）"><span class="ch-bar-num">12</span><span class="ch-bar-title">最終的な指針</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">12</div>
+        <div>
+          <span class="ch-kicker">指針のまとめ</span>
+          <h2>最終的な<wbr>指針</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card card-top-teal">
+          <span class="tag tag-teal">守る</span>
+          <h3>自分が<wbr>守りたい<wbr>価値観</h3>
+          <ul class="styled-list">
+            <li>相手の社会的地位や能力にかかわらず、人間として敬意を持って接する。</li>
+            <li>他人の不完全さを受け入れ、その人の立場や負担を想像する。</li>
+            <li>他人に何かを要求する際には、その難しさと自分自身の責任を理解する。</li>
+          </ul>
+        </div>
+
+        <div class="card card-top-coral">
+          <span class="tag tag-coral">改善する</span>
+          <h3>自分が<wbr>改善したいこと</h3>
+          <ul class="styled-list coral">
+            <li>自分の価値観に反する人を、必要以上に軽蔑しない。</li>
+            <li>相手の不適切な行動と、相手の人格全体を区別する。</li>
+            <li>強い怒りを感じても、暴言によって自分自身の価値観を損なわない。</li>
+          </ul>
+        </div>
+
+        <div class="card card-top-navy">
+          <span class="tag tag-navy">仕事</span>
+          <h3>仕事で<wbr>大切にすること</h3>
+          <ul class="styled-list navy">
+            <li>相互尊重が成立する顧客を大切にし、経済的な理由だけで望まない人間関係を維持しない。</li>
+            <li>収益性だけでなく、精神的な自由と仕事への納得感を重視する。</li>
+          </ul>
+        </div>
+
+        <div class="card card-top-amber">
+          <span class="tag tag-amber">子育て</span>
+          <h3>子育てで<wbr>大切にすること</h3>
+          <ul class="styled-list amber">
+            <li>子どもたちが安心して自分らしく成長できる環境をつくる。</li>
+            <li>子どもの気持ちを想像し、失敗や不完全さを受け入れられる父親でありたい。</li>
+            <li>夫婦間の不満や対立によって、子どもたちの安心を損なわない。</li>
+          </ul>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec13"><span><span class="to-next-label">次の章</span><span class="to-next-title">13 今後の自分に向けた言葉</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 第13章 -->
+    <section class="ch" id="sec13">
+      <a class="ch-bar" href="#toc" aria-label="第13章 今後の自分に向けた言葉（タップで目次へ）"><span class="ch-bar-num">13</span><span class="ch-bar-title">今後の自分に向けた言葉</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">13</div>
+        <div>
+          <span class="ch-kicker">未来の自分へ</span>
+          <h2>今後の<wbr>自分に<wbr>向けた<wbr>言葉</h2>
+        </div>
+      </div>
+
+      <div class="editorial">
+        <p>自分が大切にしている価値観は、<strong>他人への敬意、想像力、公正さ、誠実さ</strong>である。その価値観を持つこと自体は自分にとって重要なことであり、無理に変える必要はない。しかし、その価値観に反する人が現れたとき、強い軽蔑や怒りに支配されてしまえば、自分自身も望まない行動を取ることになる。</p>
+        <p>大切なのは、他人を正すことではなく、<strong>自分がどのような人間として生きたいかという原則を守ること</strong>である。</p>
+        <p>すべての人と分かり合う必要はない。すべての人を好きになる必要もない。価値観の合わない人と、無理に関係を続ける必要もない。一方で、他人にも自分には見えていない事情があり、自分自身の判断も間違っている可能性があることは忘れない。</p>
+        <p>仕事では、自分が納得できる相手と、価値ある仕事をする。家庭では、夫婦関係に必要以上の理想を求めず、子どもたちの安心と成長を最優先にする。</p>
+        <p>そして、自分自身についても、完璧であることを求めない。他人の不完全さを受け入れるのと同じように、自分自身の不完全さも認め、少しずつ望ましい方向へ変わっていけばよい。</p>
+
+        <div class="editorial-goal">
+          <p><strong>最終的な目的：</strong>怒らない人間になることでも、誰からも好かれる人間になることでもない。自分が大切にする価値観に沿って生きながら、不必要な怒りや軽蔑に人生の時間と心の余裕を奪われず、大切な人たちと穏やかに幸せに暮らすことである。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-next" href="#sec-meta"><span><span class="to-next-label">次の章</span><span class="to-next-title">補 この記録の位置づけ・確度</span></span></a>
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+    </section>
+
+    <!-- 補章 -->
+    <section class="ch" id="sec-meta">
+      <a class="ch-bar" href="#toc" aria-label="第補章 この記録の位置づけ・確度（タップで目次へ）"><span class="ch-bar-num">補</span><span class="ch-bar-title">この記録の位置づけ・確度</span><span class="ch-bar-toc">目次</span></a>
+      <div class="ch-head">
+        <div class="ch-num">補</div>
+        <div>
+          <span class="ch-kicker">この記録について</span>
+          <h2>この記録の<wbr>位置づけ・<wbr>確度</h2>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="conf conf-high">
+          <div class="conf-head">
+            <span class="tag tag-teal">確度：高</span>
+            <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+          </div>
+          <p>本人が明確に表明した価値観（他人への敬意、想像力、能力差への寛容さ、子どもの安心を重視する姿勢）については、複数の発言で一貫している。</p>
+        </div>
+        <div class="conf conf-mid">
+          <div class="conf-head">
+            <span class="tag tag-amber">確度：中</span>
+            <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>
+          </div>
+          <p>怒りの構造、軽蔑への移行、責任と要求水準の非対称性、一人事務所との適合性については、本人の発言と整合する分析である。ただし、今後の経験によって修正する余地がある。</p>
+        </div>
+        <div class="conf conf-low">
+          <div class="conf-head">
+            <span class="tag tag-coral">確度：低〜未確定</span>
+            <span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span>
+          </div>
+          <p>K社長や妻の内面、実際の責任の所在、各出来事の因果関係については、十分な客観的情報がないため判断を留保する。</p>
+        </div>
+
+        <div class="callout">
+          <p>この記録は、本人の価値観を新たに決定するものではなく、<strong>2026年11月20日時点</strong>の考え方と、対話から得られた分析・提案を整理したものである。</p>
+        </div>
+      </div>
+      <nav class="ch-foot" aria-label="章の移動">
+        <a class="to-toc" href="#toc">目次へ戻る</a>
+      </nav>
+      <div class="footer-space"></div>
+    </section>
+
+  </div>
+</body>
+</html>
